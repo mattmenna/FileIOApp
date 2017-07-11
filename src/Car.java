@@ -13,8 +13,12 @@ public class Car implements Serializable{
        an application that objects can be serialized (aka flattened)
        Typically use serializable for files that only my java app will use
 
+        Using the transient keyword skips the variable from being saved if you use this you will want
+        to set the variable to a default value when you deserialize it
+
     */
-    transient int test;  // this value doesn't get saved because its transient
+
+    //transient int test;  // this value doesn't get saved because its transient
     private int mileage;
     private String make;
 
