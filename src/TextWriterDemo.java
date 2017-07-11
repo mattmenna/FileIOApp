@@ -29,13 +29,19 @@ public class TextWriterDemo {
 
         //list all contents in a directory (similiar to ls command line)
 
-        if(dir.isDirectory())
-        {
+        if(dir.isDirectory()) {
             String[] dirContents = dir.list();
             for (int i = 0; i <dirContents.length ; i++) {
                 System.out.println(dirContents[i]);
-
             }
         }
-    }
-}
+        //get absolute path of a file or directory
+        System.out.println(dir.getAbsolutePath());
+
+        //delete a file returns true if succesful
+        boolean isDeleted = f.delete();
+        System.out.println(isDeleted);
+
+
+    } // end main
+} // end class
