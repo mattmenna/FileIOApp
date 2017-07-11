@@ -1,3 +1,6 @@
+import com.sun.xml.internal.fastinfoset.util.StringArray;
+
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -17,6 +20,22 @@ public class TextWriterDemo {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+        File f = new File("test.txt");
+
+        File dir = new File("Java_JuneFiles");
+        dir.mkdir();
+
+        //list all contents in a directory (similiar to ls command line)
+
+        if(dir.isDirectory())
+        {
+            String[] dirContents = dir.list();
+            for (int i = 0; i <dirContents.length ; i++) {
+                System.out.println(dirContents[i]);
+
+            }
         }
     }
 }
